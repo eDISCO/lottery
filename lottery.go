@@ -77,6 +77,7 @@ func loop(ch chan string, quit chan int) {
 			balance = com_balance
 		}
 		ret_str := "Private Key (Base64); " + pri_bytes_b64 + "; Balance;" + strconv.Itoa(balance) + ";"
+		fmt.Println(ret_str)
 		ch <- ret_str
 	}
 	quit <- 1
